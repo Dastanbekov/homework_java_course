@@ -1,13 +1,19 @@
 package OOP;
 
 public class Employed extends Human {
-    String WorkName;
-    public Employed(String name, int age, int gender, String WorkName) {
-        super(name,age,gender);
-        this.WorkName=WorkName;
+    private String workName;
+
+    public Employed(String name, int age, int gender, String workName) {
+        super(name, age, gender);
+        this.workName = workName;
     }
 
-    public void printCharasteristics(){
-        System.out.println(this.name+" "+this.age+" "+this.gender);
+    @Override
+    public void printMessage() {
+        System.out.println(name + " works at " + workName);
+    }
+
+    public void printCharacteristics() {
+        System.out.println(name + " | Age: " + getAge() + " | Gender: " + gender);
     }
 }

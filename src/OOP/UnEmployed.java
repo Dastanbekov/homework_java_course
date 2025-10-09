@@ -1,10 +1,15 @@
 package OOP;
 
 public class UnEmployed extends Human {
-    int years_unEmployed;
-    public UnEmployed(String name, int age, int gender,int years_unEmployed) {
-        super(name,age,gender);
-        this.years_unEmployed = years_unEmployed;
+    private int yearsUnemployed;
+
+    public UnEmployed(String name, int age, int gender, int yearsUnemployed) {
+        super(name, age, gender);
+        this.yearsUnemployed = yearsUnemployed;
     }
 
+    @Override
+    public void printMessage() {
+        System.out.println(name + " has been unemployed for " + yearsUnemployed + " years.");
+    }
 }

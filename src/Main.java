@@ -1,13 +1,15 @@
 import OOP.Human;
-import OOP.UnEmployed;
 import OOP.Employed;
+import OOP.UnEmployed;
 
 public class Main {
     public static void main(String[] args) {
-        Human Someone = new Human("Jonh" , 12, 1);
-        Someone.printMessage();
+        Human someone = new Human("John", 25, 1);
+        Employed worker = new Employed("Alice", 30, 2, "Google");
+        UnEmployed person = new UnEmployed("Bob", 40, 1, 3);
 
-//        Employed Jonh = new Employed("Jonh",12,1);
-
+        someone.printMessage();
+        worker.printMessage();
+        person.printMessage();
     }
 }
